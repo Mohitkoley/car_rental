@@ -10,8 +10,13 @@ A simple car rental application built with Flutter.
 
 ## Getting Started
 
-1.  **Dependencies**: Run `flutter pub get`.
-2.  **Run**: `flutter run`.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/Mohitkoley/car_rental.git
+    cd car_rental
+    ```
+2.  **Dependencies**: Run `flutter pub get`.
+3.  **Run**: `flutter run`.
 
 ## Login Credentials
 
