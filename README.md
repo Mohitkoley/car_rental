@@ -2,6 +2,8 @@
 
 A simple car rental application built with Flutter.
 
+**Flutter Version**: 3.38.5
+
 ## Features
 - Browse available cars
 - View car details
