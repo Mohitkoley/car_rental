@@ -18,7 +18,7 @@ class HomeView extends ConsumerWidget {
     final cars = ref.watch(carProvider);
     final availableCars = cars.where((car) => car.isAvailable).toList();
 
-   final double featuredCarHeight = 240;
+    final double featuredCarHeight = 240;
     return SingleChildScrollView(
       padding: const EdgeInsets.all(24.0),
       child: Column(
@@ -58,7 +58,6 @@ class HomeView extends ConsumerWidget {
             children: [
               Expanded(
                 child: StatCard(
-             
                   icon: Icons.directions_car,
                   value: '${cars.length}',
                   label: 'Total Cars',
@@ -68,7 +67,6 @@ class HomeView extends ConsumerWidget {
               const SizedBox(width: 12),
               Expanded(
                 child: StatCard(
-                
                   icon: Icons.check_circle,
                   value: '${availableCars.length}',
                   label: 'Available',
@@ -78,7 +76,6 @@ class HomeView extends ConsumerWidget {
               const SizedBox(width: 12),
               Expanded(
                 child: StatCard(
-           
                   icon: Icons.star,
                   value: '4.8',
                   label: 'Rating',
@@ -105,10 +102,7 @@ class HomeView extends ConsumerWidget {
                   gradient: LinearGradient(
                     begin: Alignment.centerLeft,
                     end: Alignment.centerRight,
-                    colors: [
-                      ColorPalette.overlay,
-                      Colors.transparent,
-                    ],
+                    colors: [ColorPalette.overlay, Colors.transparent],
                   ),
                 ),
                 padding: const EdgeInsets.all(24),
@@ -122,7 +116,9 @@ class HomeView extends ConsumerWidget {
                         vertical: 6,
                       ),
                       decoration: BoxDecoration(
-                        color: ColorPalette.featuredBadge.withValues(alpha: 0.9),
+                        color: ColorPalette.featuredBadge.withValues(
+                          alpha: 0.9,
+                        ),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Text(
@@ -137,7 +133,9 @@ class HomeView extends ConsumerWidget {
                     Text(
                       'Taste the Classy with our New',
                       style: context.labelLarge.copyWith(
-                        color: ColorPalette.textOnPrimary.withValues(alpha: 0.7),
+                        color: ColorPalette.textOnPrimary.withValues(
+                          alpha: 0.7,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -186,9 +184,7 @@ class HomeView extends ConsumerWidget {
             children: [
               Text(
                 'Available Cars',
-                style: context.titleLarge.copyWith(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: context.titleLarge.copyWith(fontWeight: FontWeight.bold),
               ),
               TextButton(
                 onPressed: () {
@@ -210,7 +206,7 @@ class HomeView extends ConsumerWidget {
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 0.75,
+              childAspectRatio: 0.66,
               crossAxisSpacing: 16,
               mainAxisSpacing: 16,
             ),
@@ -241,9 +237,4 @@ class HomeView extends ConsumerWidget {
       ),
     );
   }
-
-  
-
- 
-
 }
